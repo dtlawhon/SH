@@ -15,7 +15,7 @@ index.html:
     perhaps our input tag should be included inside of our label tag like thier example?
     
 5) password (line 90) - What was the question about this? This appears to be bootstrap as well.
-6) modal_trigger (line 110)
+6) modal_trigger (line 110) - #modal_trigger is the button on line 19 that triggers the pop-up window
 7) leanModal (line 110) - Created by a guy at FinelySliced, here is his site and github:
       http://leanmodal.finelysliced.com.au/ and https://github.com/FinelySliced/leanModal.js
 
