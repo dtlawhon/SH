@@ -1,0 +1,18 @@
+index.html:
+
+1) fa fa-times (line 26) - Font Awesome, Icon Collection, times is "x" for close button
+2) section tag (line 29) - part of HTML5, should be used for more specific applications than div, when it's contents
+      can be considered a different section of the site.
+3) file hierarchy/file variable names
+4) class checkbox (line 65) - I think this is part of the bootstrap form. On bootstrap's website: 
+
+    <div class="checkbox">
+        <label>
+            <input type="checkbox"> Check me out
+        </label>
+    </div>
+    
+    perhaps our input tage should be included inside of our label tag like thier example?
+    
+5) 
+
