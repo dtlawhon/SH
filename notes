@@ -16,7 +16,7 @@ index.html:
     
 5) password (line 90) - What was the question about this? This appears to be bootstrap as well.
 6) modal_trigger (line 110)
-7) leanModal (line 110)
+7) leanModal (line 110) - http://leanmodal.finelysliced.com.au/
 
 I think there are some redundancies in the libaries that are included.  We should clean that up, as well.
 
