@@ -18,3 +18,5 @@ index.html:
 6) modal_trigger (line 110)
 7) leanModal (line 110)
 
+I think there are some redundancies in the libaries that are included.  We should clean that up, as well.
+
