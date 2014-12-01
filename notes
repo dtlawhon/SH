@@ -21,3 +21,65 @@ index.html:
 
 I think there are some redundancies in the libaries that are included.  We should clean that up, as well.
 
+leanModal javascript:
+
+(function($) {		//creates a function that takes jQuery as an argument
+    $.fn.extend({	//merges the contents of an object onto the jQuery prototype to provide a new jQuery instance	
+        leanModal: function(options) {		//assigns the leanModal function as a property of jQuery object		
+            var defaults = {			
+                top: 100,
+                overlay: 0.5,
+                closeButton: null
+            };
+            var overlay = $("<div id='lean_overlay'></div>");
+            $("body").append(overlay);
+            options = $.extend(defaults, options);
+            return this.each(function() {
+                var o = options;
+                $(this).click(function(e) {
+                    var modal_id = $(this).attr("href");
+                    $("#lean_overlay").click(function() {
+                        close_modal(modal_id)
+                    });
+                    $(o.closeButton).click(function() {
+                        close_modal(modal_id)
+                    });
+                    var modal_height = $(modal_id).outerHeight();
+                    var modal_width = $(modal_id).outerWidth();
+                    $("#lean_overlay").css({
+                        "display": "block",
+                        opacity: 0
+                    });
+                    $("#lean_overlay").fadeTo(200, o.overlay);
+                    $(modal_id).css({
+                        "display": "block",
+                        "position": "relative",
+                        "opacity": 0,
+                        "z-index": 11000,
+                        "left": 50 + "%",
+                        "margin-left": -(modal_width / 2) + "px",
+                        /* "top": o.top + "px" */
+                    	"top": 50 + "%" 
+                      	
+                    });
+                    $(modal_id).fadeTo(200, 1); //fade to the site that is linked
+                    e.preventDefault()
+                })
+            });
+
+            function close_modal(modal_id) {
+                $("#lean_overlay").fadeOut(200);
+                $(modal_id).css({
+                    "display": "none"
+                })
+            }
+        }
+    })
+})(jQuery);
+
+
+// Other methods for a modal/overlay/lightbox :
+
+// https://kopepasah.com/tutorial/awesome-overlays-with-simple-css-javascript-html/
+// http://www.jacklmoore.com/colorbox/
+
