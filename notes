@@ -78,10 +78,17 @@ leanModal javascript:
 })(jQuery);
 
 
-// Other methods for a modal/overlay/lightbox :
+ Other methods for a modal/overlay/lightbox :
 
 
-// http://www.jacklmoore.com/colorbox/
-// http://www.jasonbutz.info/bootstrap-lightbox/
-// http://www.webdesigndev.com/web-development/20-best-premium-free-jquery-lightbox-plugins
+http://www.jacklmoore.com/colorbox/
+http://www.jasonbutz.info/bootstrap-lightbox/
+http://www.webdesigndev.com/web-development/20-best-premium-free-jquery-lightbox-plugins
+
+Rating System:
+
+http://code.tutsplus.com/tutorials/building-a-5-star-rating-system-with-jquery-ajax-and-php--net-11541
+http://www.evanmiller.org/how-not-to-sort-by-average-rating.html
+http://php.about.com/od/finishedphp1/ss/rating_script.htm
+http://www.phptoys.com/tutorial/create-rating-system.html
 
