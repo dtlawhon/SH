@@ -13,10 +13,10 @@
  *          by the way, it's bad style to use "root", but for development it will work.
  * DB_PASS: the password of the above user
  */
-define("DB_HOST", "127.0.0.1");
-define("DB_NAME", "login");
+define("DB_HOST", "localhost");
+define("DB_NAME", "SouthernHospitality");
 define("DB_USER", "root");
-define("DB_PASS", "mysql");
+define("DB_PASS", "root");
 
 /**
  * Configuration for: Cookies
