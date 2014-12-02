@@ -18,6 +18,8 @@ define("DB_NAME", "SouthernHospitality");
 define("DB_USER", "root");
 define("DB_PASS", "root");
 
+$conn = new mysqli($servername, $username, $password);
+
 /**
  * Configuration for: Cookies
  * Please note: The COOKIE_DOMAIN needs the domain where your app is,
