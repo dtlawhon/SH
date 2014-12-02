@@ -6,16 +6,15 @@ $db = 'SouthernHospitality';
 $host = 'localhost';
 $port = 3306;
 
-$link = mysqli_init();
-$success = mysqli_real_connect(
-   $link, 
-   $host, 
-   $user, 
-   $password, 
-   $db,
-   $port
-);
+//Create connection
+$conn = new mysqli($host, $username, $password, $db);
 
-echo "yah, bitch, yah";
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
+echo "you're a real dad now";
+
 
 ?>
