@@ -13,7 +13,7 @@
  *          by the way, it's bad style to use "root", but for development it will work.
  * DB_PASS: the password of the above user
  */
-define("DB_HOST", "localhost");
+define("DB_HOST", "localhost:3306");
 define("DB_NAME", "SouthernHospitality");
 define("DB_USER", "root");
 define("DB_PASS", "root");
