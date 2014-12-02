@@ -18,7 +18,7 @@ define("DB_NAME", "SouthernHospitality");
 define("DB_USER", "root");
 define("DB_PASS", "root");
 
-$conn = new mysqli($servername, $username, $password);
+$conn = new mysqli($DB_HOST, $DB_USER, $DB_PASS);
 
 /**
  * Configuration for: Cookies
