@@ -9,7 +9,7 @@
     	{% if user.is_authenticated %}
     	<p>
     		{% csrf_token %}
-    		Welcome, {{ user.username }}
+    		Welcome, {{ userprofile.first_name }}
     	</p>
 		<a href="/restricted/">Restricted Page</a><br />
 		<a href="/logout/">Logout</a><br />
