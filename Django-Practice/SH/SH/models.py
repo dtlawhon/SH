@@ -11,12 +11,12 @@ class UserProfile(models.Model):
     password = models.CharField(max_length=50, blank=True)
     first_name = models.CharField(max_length=50, blank=True)
     last_name = models.CharField(max_length=50, blank=True)
-    sex = models.CharField(max_length=50, blank=True)
+   # sex = models.CharField(max_length=50, blank=True)
    # phone_number =
    # birthday =
    # location =
-    about_me = models.TextField(max_length=500, blank=True)
-    school = models.CharField(max_length=50, blank=True)
+   # about_me = models.TextField(max_length=500, blank=True, null = True)
+   # school = models.CharField(max_length=50, blank=True)
    # work = 
    # time_zone = 
    # languages = 
