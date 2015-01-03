@@ -35,24 +35,27 @@ def register(request):
         # If the two forms are valid...
         if user_form.is_valid() and profile_form.is_valid():
             # Save the user's form data to the database.
-             user = user_form.save()
+            user = user_form.save()
 
             # Now we hash the password with the set_password method.
             # Once hashed, we can update the user object.
-             user.set_password(user.password)
-             user.save()
+            user.set_password(user.password)
+            user.save()
 
             # Now sort out the UserProfile instance.
             # Since we need to set the user attribute ourselves, we set commit=False.
             # This delays saving the model until we're ready to avoid integrity problems.
-             profile = profile_form.save(commit=False)
-             profile.user = user
-            
+            profile = profile_form.save(commit=False)
+            profile.user = user
+
+            # Did the user provide a profile picture?
+            # If so, we need to get it from the input form and put it in the UserProfile model.
+
             # Now we save the UserProfile model instance.
-             profile.save()
+            profile.save()
 
             # Update our variable to tell the template registration was successful.
-             registered = True
+            registered = True
 
         # Invalid form or forms - mistakes or something else?
         # Print problems to the terminal.
@@ -88,7 +91,7 @@ def user_login(request):
             else:
                 return HttpResponse("Your SH account is disabled")
         else:
-            print "Invalid login details: {0}, {1}".format(username,password)
+            print "Invalid login details: {0}, {1}".format(email,password)
             return HttpResponse("Invalid login details")
     else:
         return render_to_response('login.html', {}, context)

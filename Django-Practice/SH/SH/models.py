@@ -5,10 +5,6 @@ from django.contrib.auth.models import User
 class UserProfile(models.Model):
     # This line is required. Links UserProfile to a User model instance.
     user = models.OneToOneField(User)
-
-    # The additional attributes we wish to include.
-   # email = models.CharField(max_length=50, blank=True)
-   # password = models.CharField(max_length=50, blank=True)
     first_name = models.CharField(max_length=50, blank=True)
     last_name = models.CharField(max_length=50, blank=True)
    # sex = models.CharField(max_length=50, blank=True)
